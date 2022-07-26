@@ -11,7 +11,7 @@ public class ExplosionController : MonoBehaviour
     {
         timeToExplosion = 5f;
         explosionPower = 10f;
-        explosionRadius = 30f;
+        explosionRadius = 25f;
     }
 
     private void Update()
@@ -32,7 +32,6 @@ public class ExplosionController : MonoBehaviour
                 obj.AddForce(direction.normalized * explosionPower * (explosionRadius - localDistance), ForceMode.Impulse);
             }
         }
-
         timeToExplosion = 5f;
     }
 }
